@@ -40,9 +40,15 @@
                 padding: 10px;
                 cursor: pointer;
                 &:hover {
-                    background: #221d36;
+                    background: $main;
                 }
             }
         }
+    }
+    @media screen and (max-width: 1080px) {
+        margin-top: 2rem !important;
+    }
+    @media screen and (max-width: 360px) {
+        margin-top: 1rem !important;
     }
 }

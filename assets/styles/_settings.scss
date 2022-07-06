@@ -37,7 +37,14 @@ body {
     width: 100%;
     max-width: 1068px;
     margin: auto;
+    @media screen and (max-width: 1080px) {
+        margin: 0 auto;
+        width: 90%;
+    }
 }
 section {
     padding: 4rem 0 3rem;
+    @media screen and (max-width: 1080px) {
+        padding: 3rem 0 2rem;
+    }
 }

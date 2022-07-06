@@ -25,8 +25,21 @@ body {
   margin: auto;
 }
 
+@media screen and (max-width: 1080px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
 section {
   padding: 4rem 0 3rem;
+}
+
+@media screen and (max-width: 1080px) {
+  section {
+    padding: 3rem 0 2rem;
+  }
 }
 
 header {
@@ -62,6 +75,12 @@ header .nav .logo {
   font-weight: 400;
 }
 
+@media screen and (max-width: 400px) {
+  header .nav .logo {
+    font-size: 1rem;
+  }
+}
+
 header .nav #cart-icon {
   font-size: 1.8rem;
   cursor: pointer;
@@ -70,13 +89,19 @@ header .nav #cart-icon {
 header .nav .cart {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 360px;
   min-height: 100vh;
   padding: 20px;
   background: #fff;
   -webkit-box-shadow: -2px 0 4px rgba(40, 37, 37, 0.1);
           box-shadow: -2px 0 4px rgba(40, 37, 37, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .nav .cart.active {
+  right: 0;
 }
 
 header .nav .cart .cart-title {
@@ -182,6 +207,30 @@ header .nav .cart #close-cart {
   cursor: pointer;
 }
 
+@media screen and (max-width: 400px) {
+  header .nav .cart {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  header .nav .cart {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  header .nav {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .nav {
+    padding: 11px;
+  }
+}
+
 .shop {
   margin-top: 2rem;
 }
@@ -240,6 +289,18 @@ header .nav .cart #close-cart {
 }
 
 .shop .shop-content .product-box .add-cart:hover {
-  background: #221d36;
+  background: #fd4646;
+}
+
+@media screen and (max-width: 1080px) {
+  .shop {
+    margin-top: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .shop {
+    margin-top: 1rem !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
